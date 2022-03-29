@@ -1,4 +1,4 @@
-# Not-your-average-Quiz
+# Quiz-me-Coding-Quiz
 
 Check it out! 
 
@@ -10,7 +10,7 @@ Check it out!
 ## Visuals
 
 ## Install
-Open "The Coding Quiz" by inserting the https://rwood022.github.io/Not-your-average-Quiz/ into the browser. It will take the user directly to the "Welcome" page.
+Open "The Coding Quiz" by inserting the  into the browser. It will take the user directly to the "Welcome" page.
 
 ## Usage
 The purpose of this quiz is to test a Web Developer's knowledge of basic JavaScript terminology.
