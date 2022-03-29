@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Coding Quiz</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+
+    <body>
+        <header>
+        <div class="scores"></div>
+        <div class= "timer"> Seconds: <span id="time">60</span></div>
+        </header>
+
+        <main>
+           <!-- Welcome page -->
+             <div class="start-page" id="welcome">
+                <div class= "large-font">The Coding Quiz</div>
+                <div class="small-font"><p>WELCOME TO THE CODING QUIZ! You have 1 minute to finish the quiz.</p>  <p>5 seconds will be deduced from the timer when a question is answered wrong.</p>  <p>When finished, enter your initials to keep track of your score!</p></div>
+                <button id="startButton">START</button>
+             </div>    
+            
+             <!-- Quiz pages -->
+            <div id="quizQuestion" class="hide">
+                <h2 id="question"></h2>
+                <div class="choices" id= "choices">
+                    <button class="choice" id="choiceA" ></button>
+                    <button class="choice" id="choiceB"></button>
+                    <button class="choice" id="choiceC" ></button>
+                    <button class="choice" id="choiceD"></button>
+
+                </div>
+
+                
+            </div>
+
+            <div id= "finishedQuiz" class="hide">
+                <h1>Done!</h1>
+                <p>Final Score: <span type="text" id="initials"></span></p>
+                <p>Initials: <input type="text" id="initials"/>
+                <button id="submit">Add</button>
+                </p>
+            </div>  
+            
+            <div id="answer" class="hide"></div>
+
+        </main>
+        
+        <!-- questions js -->
+        <script src="./questions.js"></script>
+        <!-- <script src="submisson.js"></script> -->
+        <script src="./script.js"></script>
+
+    </body>
+</html>
+
