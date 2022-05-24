@@ -1,149 +1,142 @@
-var numQuestions = 0;
-var answer = document.getElementById("answer");
+
 var quizQuestion = [
     {
         question: "_can hold many values under a single name.",
         
-        choiceA: "objects",
-        choiceB: "functions",
-        choiceC: "variables",
-        choiceD: "arrays",
-        answer: "arrays"
+        options: ["objects", "functions", "variables", "arrays"],
+        correct: "arrays"
     },
     {
         question: "_ are also variables, but contain many values.",
         
-        choiceA: "objects",
-        choiceB: "functions",
-        choiceC: "variables",
-        choiceD: "arrays",
-        answer: "objects"
+        options: ["objects", "functions", "variables", "arrays"],
+        correct: "objects"
     },
     {
         question: "_ are containers for storing data/values.",
       
-        choiceA: "objects",
-        choiceB: "functions",
-        choiceC: "variables",
-        choiceD: "arrays",
-        answer: "variables"
+        options: ["objects",
+        "functions",
+        "variables",
+         "arrays"],
+        correct: "variables"
     },
     {
         question: "Which values are represented by A JavaScript Boolean?",
        
-        choiceA: "yes/no",
-        choiceB: "positive/negative",
-        choiceC: "it only represents integers",
-        choiceD: "true/false",
+       options: ["yes/no",
+         "positive/negative",
+         "it only represents integers",
+         "true/false"],
         answer: "true/false"
     },
     {
         question: "10 divided by 3 is 3 with a remainder of 1. In Javascript, the remainder 1 would be represented by the term:" ,
         
-        choiceA: "modulo",
-        choiceB: "percentage",
-        choiceC: "fraction",
-        choiceD: "division",
+       options: ["modulo",
+         "percentage",
+         "fraction",
+         "division"],
         answer: "modulo"
     },
     {
         question: "A String is...",
         
-        choiceA: "43",
-        choiceB: "true/false",
-        choiceC: "inside quotations",
-        choiceD: "43.21",
+        options: ["43",
+         "true/false",
+         "inside quotations",
+         "43.21"],
         answer: "inside quotations"
     },
     {
         question: "_ joins two or more strings, and returns a new joined strings.",
         
-            choiceA: "includes()",
-            choiceB: "concat()",
-            choiceC: "repeat()",
-            choiceD: "slice()",
+            options: ["includes()",
+             "concat()",
+             "repeat()",
+             "slice()"],
             answer: "concat()"
     },
     {
         question: "Extracts a part of a string and returns a new string.",
         
-            choiceA:  "slice",
-            choiceB: "split",
-            choiceC: "concat",
-            choiceD: "includes",
+            options: [ "slice",
+             "split",
+             "concat",
+             "includes"],
             answer: "slice"
     },
     {
         question: "This acronym is a format for storing and transporting data.",
         
-            choiceA: "DOM",
-            choiceB: "FUN",
-            choiceC: "JCON",
-            choiceD: "JSON",
+            options: ["DOM",
+             "FUN",
+             "JCON",
+             "JSON"],
             answer : "JSON"
     },
     {
         question: " _ are a way to group statments together to perform a task.",
-            choiceA: "objects",
-            choiceB: "functions",
-            choiceC: "variables",
-            choiceD: "arrays",
+            options: ["objects",
+             "functions",
+             "variables",
+             "arrays"],
             answer: "function"
     },
 ]
 
  //Questions display on page  
-question.textContent = quizQuestion[0].question; 
-  console.log(quizQuestion[0].question);
+// question.textContent = quizQuestion[0].question; 
+//   console.log(quizQuestion[0].question);
 
-choiceA.textContent = quizQuestion[0].choiceA;
-  console.log(quizQuestion[0].choiceA);
+// options.t[extContent = quizQuestion[0].options;
+// [  console.log(quizQuestion[0].options);[
 
-choiceB.textContent = quizQuestion[0].choiceB;
-  console.log(quizQuestion[0].choiceB);
+// choiceB.t]extContent = quizQuestion[0].choiceB;
+// ]  console.log(quizQuestion[0].choiceB);
 
-choiceC.textContent = quizQuestion[0].choiceC;
-  console.log(quizQuestion[0].choiceC);
+// choiceC.textContent = quizQuestion[0].choiceC;
+//   console.log(quizQuestion[0].choiceC);
 
-choiceD.textContent = quizQuestion[0].choiceD;
-  console.log(quizQuestion[0].choiceD);
+// .textContent = quizQuestion[0].;
+//   console.log(quizQuestion[0].choiceD);
 
 
 
-function answerReveal(event) {
-    //displays answer under choices
-    answer.style.display = "block";
+// function answerReveal(event) {
+//     //displays answer under choices
+//     answer.style.display = "block";
   
-    if (this.choice == quizQuestion[numQuestions].answer) {
-        answer.textContent = ("Bingo!")
-    } else {
-      answer.textContent = ("Nope!")
-    } console.log(answer.textContent);
+//     if (this.choice == quizQuestion[numQuestions].answer) {
+//         answer.textContent = ("Bingo!")
+//     } else {
+//       answer.textContent = ("Nope!")
+//     } console.log(answer.textContent);
 
-    renderNextQuestion();
-}; 
+//     renderNextQuestion();
+// }; 
 
-function renderNextQuestion(event) {
-    //Loops through quizQuestion array
-  nextQuestion = quizQuestion[Math.floor(Math.random() * quizQuestion.length)];
-  for (var i = 0; i < quizQuestion.length; i++) {
-      textContent.quizQuestion[i]
-  }
-  //appends new questions and choices
-  quizQuestion.appendChild(nextQuestion.textContent);
+// function renderNextQuestion(event) {
+//     //Loops through quizQuestion array
+//   nextQuestion = quizQuestion[Math.floor(Math.random() * quizQuestion.length)];
+//   for (var i = 0; i < quizQuestion.length; i++) {
+//       textContent.quizQuestion[i]
+//   }
+//   //appends new questions and choices
+//   quizQuestion.appendChild(nextQuestion.textContent);
 
-};
+// };
 
-answerReveal();
+// answerReveal();
 
-choiceA.addEventListener("click", answerReveal);
-console.log("a-clicked");
+// options.a[ddEventListener("click", answerReveal);
+// console.log("a-clicked");
 
-choiceB.addEventListener("click", answerReveal);
-console.log("b-clicked");
+// choiceB.a]ddEventListener("click", answerReveal);
+// console.log("b-clicked");
 
-choiceC.addEventListener("click", answerReveal);
-console.log("c-clicked");
+// choiceC.addEventListener("click", answerReveal);
+// console.log("c-clicked");
 
-choiceD.addEventListener("click", answerReveal);
-console.log("d-clicked");
+// choiceD.addEventListener("click", answerReveal);
+// console.log("d-clicked");

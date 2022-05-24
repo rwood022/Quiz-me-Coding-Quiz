@@ -1,30 +1,52 @@
-var welcomeSec = document.querySelector("#welcome");
+
 var startButton = document.getElementById("startButton");
 var quizQuestion = document.getElementById("quizQuestion");
+var answer = document.getElementById("answer");
 var timerEl = document.getElementById("timer");
-var time = 60;
+var time = quizQuestion.length * 15;
+var questionBank = 0;
 var countDown;
-var choices = document.getElementById("choices");
-var choiceA = document.getElementById("choiceA");
-var choiceB = document.getElementById("choiceB");
-var choiceC = document.getElementById("choiceC");
-var choiceD = document.getElementById("choiceD");
+var optionsEl = document.getElementById("options");
 
 
 
 function startQuiz() {
   console.log("start");
-  
+  var welcomeSec = document.querySelector("#welcome");
   welcomeSec.style.display = "none";
-  quizQuestion.style.display ="block";
+  quizQuestion.style.display = "block";
   countDown = setInterval(clockTick, 1000)
-  timerEl.textContent = time;
+  // timerEl.textContent = time;
+
+  nextQuestion();
+}
+
+function nextQuestion() {
+  //retrieves from array of options
+  var currentQuestion = quizQuestion[questionBank];
+  //displays current question
+  var questionEl = document.getElementById("question");
+  questionEl.textContent = questionBank.question;
+//clears old option choices
+  optionsEl.innerHTML = "";
+
+//looping over option choices
+  questionBank.options.forEach(function(option, i) {
+    // shows a new button for each option
+    var optionNode = document.createElement("button");
+    optionNode.setAttribute("class", "option");
+    optionNode.setAttribute("value", option);
+
+    optionNode.textContent = i + 1 + "." + option;
+
+    optionNode.onclick = answerCheck;
+  });
 }
 
 function quizOver() {
 
   // stop the timer
-  clearInterval(timerId);
+  clearInterval(countDown);
 
   // display end screen
 
@@ -35,8 +57,8 @@ function quizOver() {
 
 function clockTick() {
     // update time
-    time--;
-    timerEl.textContent = time;
+    // time--;
+    // timerEl.textContent = time;
 
     if (time <= 0) {
       quizOver();
