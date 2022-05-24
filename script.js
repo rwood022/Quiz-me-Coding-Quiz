@@ -16,7 +16,7 @@ function startQuiz() {
   welcomeSec.style.display = "none";
   quizQuestion.style.display = "block";
   countDown = setInterval(clockTick, 1000)
-  // timerEl.textContent = time;
+  timerEl.textContent = time;
 
   nextQuestion();
 }
@@ -39,8 +39,29 @@ function nextQuestion() {
 
     optionNode.textContent = i + 1 + "." + option;
 
+    // click event listener is attached to each option
     optionNode.onclick = answerCheck;
+
+    //shows on page
+    optionsEl.appendChild(optionNode);
   });
+}
+
+function answerCheck() {
+  // check if option is incorrect
+  if (this.value !== quizQuestion[questionBank].correct) {
+    time -= 15;
+
+    if (time < 0) {
+      time = 0;
+    }
+
+    timerEl.textContent = time;
+    answer.textContent = "Wrong"
+  }
+
+  answer.setAttribute("class", "answer");
+  setTimeout
 }
 
 function quizOver() {
