@@ -57,11 +57,25 @@ function answerCheck() {
     }
 
     timerEl.textContent = time;
-    answer.textContent = "Wrong"
+    answer.textContent = "Wrong";
+  } else {
+    answer.textContent = "Correct!";
   }
 
   answer.setAttribute("class", "answer");
-  setTimeout
+  setTimeout(function() {
+    answer.setAttribute("class", "hide");
+  }, 1000);
+
+  // get next question
+  questionBank++; 
+
+  // end game if all questions have been answered
+  if (questionBank === quizQuestion.length) {
+    quizOver();
+  } else {
+    nextQuestion();
+  }
 }
 
 function quizOver() {
