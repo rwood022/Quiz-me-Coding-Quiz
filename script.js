@@ -1,8 +1,8 @@
 
 var startButton = document.getElementById("startButton");
-var quizQuestion = document.getElementById("quizQuestion");
+var quizQuestionEl = document.getElementById("quizQuestion");
 var answer = document.getElementById("answer");
-var timerEl = document.getElementById("timer");
+var timerEl = document.getElementById("time");
 var time = quizQuestion.length * 15;
 var questionBank = 0;
 var countDown;
@@ -12,10 +12,19 @@ var optionsEl = document.getElementById("options");
 
 function startQuiz() {
   console.log("start");
+
+  // hide start screen
   var welcomeSec = document.querySelector("#welcome");
-  welcomeSec.style.display = "none";
-  quizQuestion.style.display = "block";
+  welcomeSec.setAttribute("class", "hide");
+
+  //display questions
+  quizQuestionEl.removeAttribute("class");
+  console.log(quizQuestionEl.textContent);
+
+  // start timer
   countDown = setInterval(clockTick, 1000)
+
+  //show starting time
   timerEl.textContent = time;
 
   nextQuestion();
@@ -25,25 +34,25 @@ function nextQuestion() {
   //retrieves from array of options
   var currentQuestion = quizQuestion[questionBank];
   //displays current question
-  var questionEl = document.getElementById("question");
-  questionEl.textContent = questionBank.question;
+  var questionEl = document.getElementById("quizQuestion-question");
+  questionEl.textContent = currentQuestion.question;
 //clears old option choices
   optionsEl.innerHTML = "";
 
 //looping over option choices
-  questionBank.options.forEach(function(option, i) {
+  currentQuestion.options.forEach(function(options, i) {
     // shows a new button for each option
-    var optionNode = document.createElement("button");
-    optionNode.setAttribute("class", "option");
-    optionNode.setAttribute("value", option);
+    var optionsNode = document.createElement("button");
+    optionsNode.setAttribute("class", "options");
+    optionsNode.setAttribute("value", options);
 
-    optionNode.textContent = i + 1 + "." + option;
+    optionsNode.textContent = i + 1 + "." + options;
 
     // click event listener is attached to each option
-    optionNode.onclick = answerCheck;
+    optionsNode.onclick = answerCheck;
 
     //shows on page
-    optionsEl.appendChild(optionNode);
+    optionsEl.appendChild(optionsNode);
   });
 }
 
@@ -84,10 +93,15 @@ function quizOver() {
   clearInterval(countDown);
 
   // display end screen
+var finishedQuizEl = document.getElementById("finishedQuiz");
+finishedQuizEl.removeAttribute("class");
 
   //display final score
+var scoreEl = document.getElementById("score");
+scoreEl.textContent = time;
 
   // hide questions
+  quizQuestion.setAttribute("class", "hide");
 }
 
 function clockTick() {
