@@ -3,7 +3,7 @@ var startButton = document.getElementById("startButton");
 var quizQuestionEl = document.getElementById("quizQuestion");
 var answer = document.getElementById("answer");
 var timerEl = document.getElementById("time");
-var time = quizQuestion.length * 15;
+var time = quizQuestion.length * 9;
 var questionBank = 0;
 var countDown;
 var optionsEl = document.getElementById("options");
@@ -46,7 +46,8 @@ function nextQuestion() {
     optionsNode.setAttribute("class", "options");
     optionsNode.setAttribute("value", options);
 
-    optionsNode.textContent = i + 1 + "." + options;
+    // displays a number (1-4) to each option
+    optionsNode.textContent = i + 1 + ". " + options;
 
     // click event listener is attached to each option
     optionsNode.onclick = answerCheck;
@@ -59,7 +60,7 @@ function nextQuestion() {
 function answerCheck() {
   // check if option is incorrect
   if (this.value !== quizQuestion[questionBank].correct) {
-    time -= 15;
+    time -= 10;
 
     if (time < 0) {
       time = 0;
@@ -105,9 +106,9 @@ scoreEl.textContent = time;
 }
 
 function clockTick() {
-    // update time
-    // time--;
-    // timerEl.textContent = time;
+    // update time; and displays the countdown
+    time--;
+    timerEl.textContent = time;
 
     if (time <= 0) {
       quizOver();

@@ -28,7 +28,7 @@ var quizQuestion = [
          "positive/negative",
          "it only represents integers",
          "true/false"],
-        answer: "true/false"
+        correct: "true/false"
     },
     {
         question: "10 divided by 3 is 3 with a remainder of 1. In Javascript, the remainder 1 would be represented by the term:" ,
@@ -37,7 +37,7 @@ var quizQuestion = [
          "percentage",
          "fraction",
          "division"],
-        answer: "modulo"
+        correct: "modulo"
     },
     {
         question: "A String is...",
@@ -46,7 +46,7 @@ var quizQuestion = [
          "true/false",
          "inside quotations",
          "43.21"],
-        answer: "inside quotations"
+        correct: "inside quotations"
     },
     {
         question: "_ joins two or more strings, and returns a new joined strings.",
@@ -55,7 +55,7 @@ var quizQuestion = [
              "concat()",
              "repeat()",
              "slice()"],
-            answer: "concat()"
+            correct: "concat()"
     },
     {
         question: "Extracts a part of a string and returns a new string.",
@@ -64,7 +64,7 @@ var quizQuestion = [
              "split",
              "concat",
              "includes"],
-            answer: "slice"
+            correct: "slice"
     },
     {
         question: "This acronym is a format for storing and transporting data.",
@@ -73,7 +73,7 @@ var quizQuestion = [
              "FUN",
              "JCON",
              "JSON"],
-            answer : "JSON"
+            correct : "JSON"
     },
     {
         question: " _ are a way to group statments together to perform a task.",
@@ -81,62 +81,8 @@ var quizQuestion = [
              "functions",
              "variables",
              "arrays"],
-            answer: "function"
+            correct: "function"
     },
 ]
 
- //Questions display on page  
-// question.textContent = quizQuestion[0].question; 
-//   console.log(quizQuestion[0].question);
 
-// options.t[extContent = quizQuestion[0].options;
-// [  console.log(quizQuestion[0].options);[
-
-// choiceB.t]extContent = quizQuestion[0].choiceB;
-// ]  console.log(quizQuestion[0].choiceB);
-
-// choiceC.textContent = quizQuestion[0].choiceC;
-//   console.log(quizQuestion[0].choiceC);
-
-// .textContent = quizQuestion[0].;
-//   console.log(quizQuestion[0].choiceD);
-
-
-
-// function answerReveal(event) {
-//     //displays answer under choices
-//     answer.style.display = "block";
-  
-//     if (this.choice == quizQuestion[numQuestions].answer) {
-//         answer.textContent = ("Bingo!")
-//     } else {
-//       answer.textContent = ("Nope!")
-//     } console.log(answer.textContent);
-
-//     renderNextQuestion();
-// }; 
-
-// function renderNextQuestion(event) {
-//     //Loops through quizQuestion array
-//   nextQuestion = quizQuestion[Math.floor(Math.random() * quizQuestion.length)];
-//   for (var i = 0; i < quizQuestion.length; i++) {
-//       textContent.quizQuestion[i]
-//   }
-//   //appends new questions and choices
-//   quizQuestion.appendChild(nextQuestion.textContent);
-
-// };
-
-// answerReveal();
-
-// options.a[ddEventListener("click", answerReveal);
-// console.log("a-clicked");
-
-// choiceB.a]ddEventListener("click", answerReveal);
-// console.log("b-clicked");
-
-// choiceC.addEventListener("click", answerReveal);
-// console.log("c-clicked");
-
-// choiceD.addEventListener("click", answerReveal);
-// console.log("d-clicked");
