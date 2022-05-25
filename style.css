@@ -6,6 +6,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
+main {
+    margin: 10px auto 0 auto;
+    max-width: 900px;
+}
 .quiz-container {
     border: 1px dashed gray;
     margin: auto;
@@ -14,14 +18,18 @@ body {
 }
 
 .timer {
-    position: absolute;
     color: rgb(71, 12, 126);
-    text-align: right;
     padding: 20px;
 }
 
-button {
+.scores {
+    position: absolute;
+    color:rgb(71, 12, 126);
+    top: 10px;
+    right: 20px;
+}
 
+button {
     color: white;
     background-color: grey;
     text-align: center;
@@ -47,14 +55,17 @@ button {
 
 
 #quizQuestion {
-    font-size: 1.25em;
-    padding: 30px 200px;
+    font-size: 1em;
     padding-top: 50px;
     scroll-padding-bottom: 10px;
     display: block;
 }
-#answer {
-    display: none;
+.answer {
+    font-size: 90%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: rgb(16, 16, 73);
+    border-top: 2px dashed blue;
 }
 .choices button{
     display: inline-block;
@@ -66,7 +77,6 @@ button {
     border-radius: 3px;
     padding: 8px;
     margin: 3px;
-    /* align-items: center; */
     justify-content: space-between;
 
 }
@@ -80,7 +90,4 @@ button:hover {
 .hide {
     display: none;
 }
- .answer {
-     color: grey;
-     border-top: 2px dashed grey;
- }
+
