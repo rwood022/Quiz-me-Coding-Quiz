@@ -127,15 +127,14 @@ function addScore() {
     var scores = JSON.parse(window.localStorage.getItem("scores")) || [];
 
     // format new score object for current user
-
     var newScore = {
       score: time,
       initals: initials
     };
 
     // save to localstorage
-    highscores.push(newScore);
-    window.localStorage.setItem("scores", JSON.stringify(highscores));
+    scores.push(newScore);
+    window.localStorage.setItem("scores", JSON.stringify(scores));
 
     // redirects to Score Board
     window.location.href = "scores.html";
