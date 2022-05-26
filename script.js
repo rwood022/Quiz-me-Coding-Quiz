@@ -1,5 +1,6 @@
 
 var startButton = document.getElementById("startButton");
+var submitButton = document.getElementById("submit");
 var quizQuestionEl = document.getElementById("quizQuestion");
 var answer = document.getElementById("answer");
 var timerEl = document.getElementById("time");
@@ -118,9 +119,28 @@ function clockTick() {
 function addScore() {
 
   //grabs value from box
-  var initials = initialsEl.value.trim()
+  var initials = initialsEl.value.trim();
+
+  // checks if value is empty
+  if (initials != "") {
+    //gets saves scores from localstorage, or if not any, set to empty array
+    var scores = JSON.parse(window.localStorage.getItem("scores")) || [];
+
+    // format new score object for current user
+
+    var newScore = {
+      score: time,
+      initals: initials
+    };
+
+    // save to localstorage
+    highscores.push(newScore);
+    window.localStorage.setItem("scores", JSON.stringify(highscores));
+
+    // redirects to Score Board
+    window.location.href = "scores.html";
+  }
 }
 
-
-
+submitButton.addEventListener("click", addScore);
 startButton.addEventListener("click", startQuiz);

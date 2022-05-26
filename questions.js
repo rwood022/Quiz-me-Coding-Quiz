@@ -81,7 +81,7 @@ var quizQuestion = [
              "functions",
              "variables",
              "arrays"],
-            correct: "function"
+            correct: "functions"
     },
 ]
 
