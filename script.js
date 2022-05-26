@@ -115,6 +115,12 @@ function clockTick() {
     }
 }
 
+function addScore() {
+
+  //grabs value from box
+  var initials = initialsEl.value.trim()
+}
+
 
 
 startButton.addEventListener("click", startQuiz);

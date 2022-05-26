@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+header {
+    border-bottom: 1px solid gray;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -34,12 +38,16 @@ button {
     background-color: grey;
     text-align: center;
     border-radius: 10px;
-    max-width: 250px;
-    padding: 15px;
-    margin: auto;
+    /* max-width: 250px; */
+    padding: 5px;
+    margin: 4px;
     font-size: larger;
-    display: flex;
+    display: center;
     justify-content: center;
+}
+
+#startButton {
+   position: center;
 }
 
 .large-font {
@@ -55,9 +63,10 @@ button {
 
 
 #quizQuestion {
+    text-align: center;
     font-size: 1em;
-    padding-top: 50px;
-    scroll-padding-bottom: 10px;
+    padding-top: 30px;
+    scroll-padding-bottom: 0px;
     display: block;
 }
 .answer {
@@ -67,19 +76,7 @@ button {
     color: rgb(16, 16, 73);
     border-top: 2px dashed blue;
 }
-.choices button{
-    display: inline-block;
-    color: rgb(45, 45, 45);
-    padding: 20px;
-    display: flex;
-    background:rgb(223, 197, 247);
-    border: 1px solid purple;
-    border-radius: 3px;
-    padding: 8px;
-    margin: 3px;
-    justify-content: space-between;
 
-}
 
 button:hover {
     color:rgb(247, 245, 249);
@@ -91,3 +88,11 @@ button:hover {
     display: none;
 }
 
+#submit {
+    position: right;
+    padding: 2px;
+    margin: 0px;
+    justify-content: center;
+    border-radius: 0;
+
+}

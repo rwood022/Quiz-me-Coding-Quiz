@@ -1,19 +1,19 @@
 
 var quizQuestion = [
     {
-        question: "_can hold many values under a single name.",
+        question: "1/10) _can hold many values under a single name.",
         
         options: ["objects", "functions", "variables", "arrays"],
         correct: "arrays"
     },
     {
-        question: "_ are also variables, but contain many values.",
+        question: "2/10) _ are also variables, but contain many values.",
         
         options: ["objects", "functions", "variables", "arrays"],
         correct: "objects"
     },
     {
-        question: "_ are containers for storing data/values.",
+        question: "3/10) _ are containers for storing data/values.",
       
         options: ["objects",
         "functions",
@@ -22,16 +22,16 @@ var quizQuestion = [
         correct: "variables"
     },
     {
-        question: "Which values are represented by A JavaScript Boolean?",
+        question: "4/10 What values are represented by A JavaScript Boolean?",
        
        options: ["yes/no",
          "positive/negative",
-         "it only represents integers",
+         "integers",
          "true/false"],
         correct: "true/false"
     },
     {
-        question: "10 divided by 3 is 3 with a remainder of 1. In Javascript, the remainder 1 would be represented by the term:" ,
+        question: "5/10) 10 divided by 3 is 3 with a remainder of 1. In Javascript, the remainder 1 would be represented by the term:" ,
         
        options: ["modulo",
          "percentage",
@@ -40,16 +40,16 @@ var quizQuestion = [
         correct: "modulo"
     },
     {
-        question: "A String is...",
+        question: "6/10) A String is...",
         
         options: ["43",
          "true/false",
-         "inside quotations",
+         "a value inside quotations",
          "43.21"],
         correct: "inside quotations"
     },
     {
-        question: "_ joins two or more strings, and returns a new joined strings.",
+        question: "7/10) _ joins two or more strings, and returns a new joined strings.",
         
             options: ["includes()",
              "concat()",
@@ -58,7 +58,7 @@ var quizQuestion = [
             correct: "concat()"
     },
     {
-        question: "Extracts a part of a string and returns a new string.",
+        question: "8/10) Extracts a part of a string and returns a new string.",
         
             options: [ "slice",
              "split",
@@ -67,7 +67,7 @@ var quizQuestion = [
             correct: "slice"
     },
     {
-        question: "This acronym is a format for storing and transporting data.",
+        question: "9/10) This acronym is a format for storing and transporting data.",
         
             options: ["DOM",
              "FUN",
@@ -76,7 +76,7 @@ var quizQuestion = [
             correct : "JSON"
     },
     {
-        question: " _ are a way to group statments together to perform a task.",
+        question: "10/10) _ are a way to group statments together to perform a task.",
             options: ["objects",
              "functions",
              "variables",
