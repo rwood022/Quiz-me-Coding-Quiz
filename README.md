@@ -9,7 +9,10 @@ Check it out!
 
 ## Visuals
 
-<
+<img width="1440" alt="Screen Shot 2022-05-27 at 6 23 18 PM" src="https://user-image![Uploading Screen Shot 2022-05-27 at 6.23.33 PM.png…]()
+s.githubusercontent.com/93175265/170796751-55c76ddb-11f2-4f56-bbab-4580769d3ff4.png">
+
+
 
 ## Install
 Open "QuizMe Coding Quiz" by inserting the  into the browser. It will take the user directly to the "Welcome" page.
