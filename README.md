@@ -10,9 +10,11 @@ Check it out!
 ## Visuals
 <img width="1440" alt="Screen Shot 2022-05-27 at 6 23 18 PM" src="https://user-images.githubusercontent.com/93175265/170796818-6fd51402-4650-444d-9e39-0f49a13f918b.png">
 
+<img width="1440" alt="Screen Shot 2022-05-27 at 6 23 33 PM" src="https://user-images.githubusercontent.com/93175265/170796849-dff94752-11cd-4534-985a-077cb1306b01.png">
 
+<img width="1440" alt="Screen Shot 2022-05-27 at 6 24 46 PM" src="https://user-images.githubusercontent.com/93175265/170796873-f7b98332-3c34-47ac-81e6-7d29675d561b.png">
 
-
+<img width="1440" alt="Screen Shot 2022-05-27 at 6 24 54 PM" src="https://user-images.githubusercontent.com/93175265/170796892-f0f75723-d06d-45c2-976f-6c9d54d05f35.png">
 
 ## Install
 Open "QuizMe Coding Quiz" by inserting the  into the browser. It will take the user directly to the "Welcome" page.
