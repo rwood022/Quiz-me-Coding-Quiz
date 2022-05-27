@@ -8,9 +8,9 @@ Check it out!
 "QuizMe Coding Quiz" operates with a HTML, CSS and Javascript file. When opening the webpage, the user views the title, a brief description stating that the user has 90 seconds to complete the quiz and will deduced 10 seconds for every incorrect answer. Upon clicking the start button, the timer will begin counting down, and the questions and answer choices will be displayed on the screen. The user answers the questions by selecting an option button. The answer reveal will flash underneath the next question. After the timer runs out, or the questions are all answered, the user will view their score. The score screen show the user's score and asks for their initials to save their scores. The user can then keep track of their scores/ progress and compete with their peers with each completed quiz.
 
 ## Visuals
+<img width="1440" alt="Screen Shot 2022-05-27 at 6 23 18 PM" src="https://user-images.githubusercontent.com/93175265/170796818-6fd51402-4650-444d-9e39-0f49a13f918b.png">
 
-<img width="1440" alt="Screen Shot 2022-05-27 at 6 23 18 PM" src="https://user-image![Uploading Screen Shot 2022-05-27 at 6.23.33 PM.png…]()
-s.githubusercontent.com/93175265/170796751-55c76ddb-11f2-4f56-bbab-4580769d3ff4.png">
+
 
 
 
