@@ -98,7 +98,7 @@ function quizOver() {
 var finishedQuizEl = document.getElementById("finishedQuiz");
 finishedQuizEl.removeAttribute("class");
 
-  //display final score
+  //display final score as the same value as the time
 var scoreEl = document.getElementById("score");
 scoreEl.textContent = time;
 
@@ -124,13 +124,13 @@ function addScore() {
 
   // checks if value is empty
   if (initials != "") {
-    //gets saves scores from localstorage, or if not any, set to empty array
+    //gets saves scores from localstorage, or if none, set to empty array
     var scores = JSON.parse(window.localStorage.getItem("scores")) || [];
 
     // format new score object for current user
     var newScore = {
       score: time,
-      initals: initials
+      initials: initials
     };
 
     // save to localstorage
@@ -151,3 +151,5 @@ function enterSave(e) {
 submitButton.addEventListener("click", addScore) 
 
 startButton.addEventListener("click", startQuiz);
+
+initialsEl.onkeyup = enterSave;

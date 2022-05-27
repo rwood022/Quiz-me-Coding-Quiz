@@ -1,6 +1,7 @@
 function showScoreBoard() {
     // gets score from storage or adds score to empty array
     var scores = JSON.parse(window.localStorage.getItem("scores")) || [];
+    console.log(scores);
 
     // arrange scores in descending order
     scores.sort(function(a, b) {
@@ -10,7 +11,7 @@ function showScoreBoard() {
     scores.forEach(function(score) {
         //li tag for each score
         var liTag = document.createElement("li");
-        liTag.textContent = score, initialsEl + " - " + score.score;
+        liTag.textContent = score.initials + " - " + score.score;
 
         // display on screen
         var olEL = document.getElementById("scores");
