@@ -3,14 +3,14 @@ function showScoreBoard() {
     var scores = JSON.parse(window.localStorage.getItem("scores")) || [];
 
     // arrange scores in descending order
-    highscores.sort(function(a, b) {
+    scores.sort(function(a, b) {
         return b.score - a.score;
     });
 
     scores.forEach(function(score) {
         //li tag for each score
         var liTag = document.createElement("li");
-        liTag.textContent = score,initials + " - " + score.score;
+        liTag.textContent = score, initialsEl + " - " + score.score;
 
         // display on screen
         var olEL = document.getElementById("scores");

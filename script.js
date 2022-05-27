@@ -1,6 +1,6 @@
-
 var startButton = document.getElementById("startButton");
 var submitButton = document.getElementById("submit");
+var initialsEl = document.getElementById("initials");
 var quizQuestionEl = document.getElementById("quizQuestion");
 var answer = document.getElementById("answer");
 var timerEl = document.getElementById("time");
@@ -103,7 +103,7 @@ var scoreEl = document.getElementById("score");
 scoreEl.textContent = time;
 
   // hide questions
-  quizQuestion.setAttribute("class", "hide");
+  quizQuestionEl.setAttribute("class", "hide");
 }
 
 function clockTick() {
@@ -117,9 +117,10 @@ function clockTick() {
 }
 
 function addScore() {
-
+  console.log("Add Score");
   //grabs value from box
   var initials = initialsEl.value.trim();
+  console.log(initialsEl.value.trim());
 
   // checks if value is empty
   if (initials != "") {
@@ -137,9 +138,16 @@ function addScore() {
     window.localStorage.setItem("scores", JSON.stringify(scores));
 
     // redirects to Score Board
-    window.location.href = "scores.html";
+    window.location.href = "score.html";
   }
 }
 
-submitButton.addEventListener("click", addScore);
+function enterSave(e) {
+  if (e.key === "Enter") {
+    addScore();
+  }
+}
+
+submitButton.addEventListener("click", addScore) 
+
 startButton.addEventListener("click", startQuiz);
