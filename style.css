@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
+
 }
 
 header {
     border-bottom: 1px solid gray;
+    background-color: aquamarine;
 }
 
 body {
@@ -74,13 +76,17 @@ button {
     margin-top: 20px;
     padding-top: 10px;
     color: rgb(16, 16, 73);
-    border-top: 2px dashed blue;
+    border-top: 2px dashed aquamarine;
 }
 
+.button {
+    transition-duration: 0.4s;
+}
 
 button:hover {
     color:rgb(247, 245, 249);
-    background-color: indigo;
+    background-color: purple;
+    box-shadow: 1px 1px 2px black, 0 0 25px indigo, 0 0 5px darkblue;
 
 }
 
